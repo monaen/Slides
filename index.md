@@ -9,6 +9,9 @@ hitheme     : tomorrow      #
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
+github:
+  user: monaen
+  repo: Slides
 ---
 
 ## Overview
