@@ -1,5 +1,5 @@
 ---
-title       : Culture Network
+title       : Chinese Culture
 subtitle    : Famous People transmission net
 author      : 
 job         : 
