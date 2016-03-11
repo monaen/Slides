@@ -431,7 +431,7 @@ callbacks.shift()();
 <h2 style="color:#E81515;">Warming up</h2>
 
 <pre><code class="r">data3 &lt;- read.csv(&quot;3_sell.csv&quot;,header = T)
-head(data3, 6) # The first 6 rows in data2
+head(data3, 6) # The first 6 rows in data3
 </code></pre>
 
 <pre><code>##   Province total Y2013 Y2014
@@ -466,7 +466,7 @@ head(data3, 6) # The first 6 rows in data2
     <h3 style="color:#E81515;">World Heritage Data</h3>
 
 <pre><code class="r">data4 &lt;- read.csv(&quot;whc-sites-2015.csv&quot;,header = T)
-head(data4[,c(4,10,13,14,15,27,29)], 5) # The first 6 rows in data2
+head(data4[,c(4,10,13,14,15,27,29)], 5) # The first 5 rows in data4
 </code></pre>
 
 <pre><code>##                                                               name_en
@@ -544,7 +544,7 @@ head(data4[,c(4,10,13,14,15,27,29)], 5) # The first 6 rows in data2
   </hgroup>
   <article data-timings="">
     <pre><code class="r">data5 &lt;- read.csv(&quot;5_flight.csv&quot;,header = T)
-head(data5, 3) # The first 3 rows in data2
+head(data5, 3) # The first 3 rows in data5
 </code></pre>
 
 <pre><code>##   residence.area. workplace.area. X.categories WorkAtHome Underground
@@ -630,7 +630,7 @@ head(data5, 3) # The first 3 rows in data2
   </hgroup>
   <article data-timings="">
     <pre><code class="r">data6 &lt;- read.csv(&quot;6_migration.csv&quot;,header = T, sep=&quot;;&quot;)
-head(data6[,c(-1,-5,-10)], 3) # The first 3 rows in data2
+head(data6[,c(-1,-5,-10)], 3) # The first 3 rows in data6
 </code></pre>
 
 <pre><code>##   PrsLabel BYear BLocLabel  BLocLat BLocLong DYear DLocLabel  DLocLat

@@ -349,7 +349,7 @@ callbacks.shift()();
 
 ```r
 data3 <- read.csv("3_sell.csv",header = T)
-head(data3, 6) # The first 6 rows in data2
+head(data3, 6) # The first 6 rows in data3
 ```
 
 ```
@@ -375,7 +375,7 @@ head(data3, 6) # The first 6 rows in data2
 
 ```r
 data4 <- read.csv("whc-sites-2015.csv",header = T)
-head(data4[,c(4,10,13,14,15,27,29)], 5) # The first 6 rows in data2
+head(data4[,c(4,10,13,14,15,27,29)], 5) # The first 5 rows in data4
 ```
 
 ```
@@ -427,7 +427,7 @@ head(data4[,c(4,10,13,14,15,27,29)], 5) # The first 6 rows in data2
 
 ```r
 data5 <- read.csv("5_flight.csv",header = T)
-head(data5, 3) # The first 3 rows in data2
+head(data5, 3) # The first 3 rows in data5
 ```
 
 ```
@@ -511,7 +511,7 @@ head(data5, 3) # The first 3 rows in data2
 
 ```r
 data6 <- read.csv("6_migration.csv",header = T, sep=";")
-head(data6[,c(-1,-5,-10)], 3) # The first 3 rows in data2
+head(data6[,c(-1,-5,-10)], 3) # The first 3 rows in data6
 ```
 
 ```
