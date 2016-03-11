@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Visualization</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Data Visualization">
+  <meta name="author" content="Nan Meng">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/quiz/css/demo.css"></link>
+<link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Data Visualization</h1>
+    <h2>An artist field in vision</h2>
+    <p>Nan Meng<br/>Ph.D</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Overview</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol class = "build incremental">
+<li>Recap traditional visualization methods</li>
+<li>Techniques for advanced visualizing</li>
+<li>Examples</li>
+<li>Summary</li>
+<li>For you...</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:#FFFFFF;">
+  <hgroup>
+    <h2>Recap visualization methods(traditional)</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">data1 &lt;- read.csv(&quot;1_data_generated.csv&quot;,header = T)
+head(data1, 10) # The first 10 rows in data1
+</code></pre>
+
+<pre><code>##    language     date    price
+## 1   Spanish Dec 1850 45871359
+## 2   Spanish Dec 1851 53328379
+## 3   Spanish Dec 1852 47419413
+## 4   Spanish Dec 1853 41855112
+## 5   Spanish Dec 1854 40154362
+## 6   Spanish Dec 1855 43819130
+## 7   Spanish Dec 1856 49579310
+## 8   Spanish Dec 1857 55593229
+## 9   Spanish Dec 1858 51145836
+## 10  Spanish Dec 1859 55139219
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:#FFFFFF;">
+  <hgroup>
+    <h2>Recap visualization methods(traditional)</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">head(data1, 10) # The first 10 rows in data1
+</code></pre>
+
+<div style='float:left;width:75%;' class='centered'>
+  <div width = '720px'>
+      <iframe sandbox="allow-scripts allow-forms allow-same-origin" src="http://monaen.github.io/marvelchinese/PlotCode/3D-show-wheel/index.html" marginwidth="0" marginheight="0" scrolling="yes" width='720px' height='600px' frameBorder='1'></iframe>
+</div>
+
+</div>
+<div style='float:right;width:20%;'>
+  <ul>
+<li>lines</li>
+<li>horizons</li>
+<li>areas</li>
+<li>stacked areas</li>
+<li>streamgraph</li>
+<li>overlapping areas</li>
+<li>grouped bars</li>
+<li>stacked bars</li>
+<li>bars</li>
+<li>donut</li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>What data visualization really is?</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:#FFFFFF;">
+  <hgroup>
+    <h2>Book Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">data2 &lt;- read.csv(&quot;2_Export_Num.csv&quot;,header = T)
+head(data2, 6) # The first 6 rows in data2
+</code></pre>
+
+<pre><code>##   date Philosopy.Social.Science Culture.and.Education Literature.and.Art
+## 1 2014                   111.65                216.22             143.87
+## 2 2013                   159.54                386.27             203.52
+## 3 2012                   173.44                350.60             233.41
+## 4 2011                   101.52                158.08             144.66
+## 5 2010                   105.32                124.24             129.70
+## 6 2009                    84.04                123.97             105.12
+##   Natural.Science.and.S.T For.Children General.Books
+## 1                   41.53       807.08        145.40
+## 2                   62.26       724.39        201.60
+## 3                   85.49       538.23        295.99
+## 4                   57.99       205.23        188.27
+## 5                   59.86       140.47        147.64
+## 6                   90.11        70.64        150.96
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Thinking about it in 10 seconds ......</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:#FFFFFF;">
+  <hgroup>
+    <h2>Motion Chart</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">data2 &lt;- read.csv(&quot;2_Export_Num.csv&quot;,header = T)
+head(data2, 6) # The first 6 rows in data2
+</code></pre>
+
+<h2 style="color:#E81515;">Radio</h2>
+
+<div style='float:left;width:75%;' class='centered'>
+  <iframe sandbox="allow-scripts allow-forms allow-same-origin" src="http://monaen.github.io/marvelchinese/PlotCode/NVD3-Bar-Plot/Export_Num.html" marginwidth="0" marginheight="0" scrolling="yes" width='700px' height='300px' frameBorder='1'></iframe>
+
+</div>
+<div style='float:right;width:20%;'>
+  <ul>
+<li>Proportional Information</li>
+<li>Tendency</li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-8" style="background:#FFFFFF;">
+  <hgroup>
+    <h2>Fruits Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>##     Fruit Year Location Sales Expenses Profit       Date
+## 1  Apples 2008     West    98       78     20 2008-12-31
+## 2  Apples 2009     West   111       79     32 2009-12-31
+## 3  Apples 2010     West    89       76     13 2010-12-31
+## 4 Oranges 2008     East    96       81     15 2008-12-31
+## 5 Bananas 2008     East    85       76      9 2008-12-31
+## 6 Oranges 2009     East    93       80     13 2009-12-31
+## 7 Bananas 2009     East    94       78     16 2009-12-31
+## 8 Oranges 2010     East    98       91      7 2010-12-31
+## 9 Bananas 2010     East    81       71     10 2010-12-31
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-9" style="background:#FFFFFF;">
+  <hgroup>
+    <h2>Motion Chart</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:75%;' class='centered'>
+  <!-- MotionChart generated in R 3.2.3 by googleVis 0.5.10 package -->
+
+<!-- Fri Mar 11 13:27:00 2016 -->
+
+<!-- jsHeader -->
+
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataMotionChartID2fba2b03d530 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Apples",
+2008,
+"West",
+98,
+78,
+20,
+"2008-12-31" 
+],
+[
+ "Apples",
+2009,
+"West",
+111,
+79,
+32,
+"2009-12-31" 
+],
+[
+ "Apples",
+2010,
+"West",
+89,
+76,
+13,
+"2010-12-31" 
+],
+[
+ "Oranges",
+2008,
+"East",
+96,
+81,
+15,
+"2008-12-31" 
+],
+[
+ "Bananas",
+2008,
+"East",
+85,
+76,
+9,
+"2008-12-31" 
+],
+[
+ "Oranges",
+2009,
+"East",
+93,
+80,
+13,
+"2009-12-31" 
+],
+[
+ "Bananas",
+2009,
+"East",
+94,
+78,
+16,
+"2009-12-31" 
+],
+[
+ "Oranges",
+2010,
+"East",
+98,
+91,
+7,
+"2010-12-31" 
+],
+[
+ "Bananas",
+2010,
+"East",
+81,
+71,
+10,
+"2010-12-31" 
+] 
+];
+data.addColumn('string','Fruit');
+data.addColumn('number','Year');
+data.addColumn('string','Location');
+data.addColumn('number','Sales');
+data.addColumn('number','Expenses');
+data.addColumn('number','Profit');
+data.addColumn('string','Date');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartMotionChartID2fba2b03d530() {
+var data = gvisDataMotionChartID2fba2b03d530();
+var options = {};
+options["width"] =    600;
+options["height"] =    500;
+options["state"] = "";
+
+    var chart = new google.visualization.MotionChart(
+    document.getElementById('MotionChartID2fba2b03d530')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "motionchart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartMotionChartID2fba2b03d530);
+})();
+function displayChartMotionChartID2fba2b03d530() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+
+<!-- jsChart -->  
+
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID2fba2b03d530"></script>
+ 
+
+<!-- divChart -->
+
+<div id="MotionChartID2fba2b03d530" 
+  style="width: 600; height: 500;">
+</div>
+
+</div>
+<div style='float:right;width:20%;'>
+  <ul>
+<li>Checkbox</li>
+<li>ScrollBar</li>
+<li>Menu</li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-10" style="background:;">
+  <hgroup>
+    <h2>More complex data ......</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:#FFFFFF;">
+  <hgroup>
+    <h2>Geography Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br></p>
+
+<h2 style="color:#E81515;">Warming up</h2>
+
+<pre><code class="r">data3 &lt;- read.csv(&quot;3_sell.csv&quot;,header = T)
+head(data3, 6) # The first 6 rows in data2
+</code></pre>
+
+<pre><code>##   Province total Y2013 Y2014
+## 1  Beijing   371   185   186
+## 2  Tianjin   646   324   322
+## 3    Hebei  1166   562   604
+## 4   Shanxi   117    60    57
+## 5 Mongolia    78    40    38
+## 6 Liaoning   613   327   286
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-12" style="background:#FFFFFF;">
+  <hgroup>
+    <h2>Choropleth</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe align = "center" sandbox="allow-scripts allow-forms allow-same-origin" src="http://monaen.github.io/marvelchinese/PlotCode/chinaChoropleth/index.html" marginwidth="0" marginheight="0" scrolling="yes" width='700px' height='900px' frameBorder='1'></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:#FFFFFF;">
+  <hgroup>
+    <h2>Time for you</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3 style="color:#E81515;">World Heritage Data</h3>
+
+<pre><code class="r">data4 &lt;- read.csv(&quot;whc-sites-2015.csv&quot;,header = T)
+head(data4[,c(4,10,13,14,15,27,29)], 5) # The first 6 rows in data2
+</code></pre>
+
+<pre><code>##                                                               name_en
+## 1 Cultural Landscape and Archaeological Remains of the Bamiyan Valley
+## 2                           Minaret and Archaeological Remains of Jam
+## 3                          Historic Centres of Berat and Gjirokastra 
+## 4                                                             Butrint
+## 5                                             Al Qal&#39;a of Beni Hammad
+##   date_inscribed longitude latitude area_hectares category states_name_en
+## 1           2003  67.82525 34.84694      158.9265 Cultural    Afghanistan
+## 2           2002  64.51606 34.39656       70.0000 Cultural    Afghanistan
+## 3           2005  20.13333 40.06944       58.9000 Cultural        Albania
+## 4           1992  20.02611 39.75111            NA Cultural        Albania
+## 5           1980   4.78684 35.81844      150.0000 Cultural        Algeria
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-14" style="background:;">
+  <hgroup>
+    <h2>Thinking about it in 10 seconds ......</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-15" style="background:#FFFFFF;">
+  <hgroup>
+    <h2>Symbol Map &amp; Crossfilter</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe align = "center" sandbox="allow-scripts allow-forms allow-same-origin" src="http://monaen.github.io/marvelchinese/PlotCode/World-Heritage-List/World-Heritage-List/webpage/index.html" marginwidth="0" marginheight="0" scrolling="yes" width='800px' height='900px' frameBorder='1'></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-16" style="background:;">
+  <hgroup>
+    <h2>Hmmmmm how about Network !!!</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:#FFFFFF;">
+  <article data-timings="">
+    <h2 style="color:#E81515;" align = "center">Facebook</h2>
+
+<p><img src="./facebook_map.png" alt="img"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-18" style="background:;">
+  <hgroup>
+    <h2>Can we do that ......</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:#FFFFFF;">
+  <hgroup>
+    <h2>Flights Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">data5 &lt;- read.csv(&quot;5_flight.csv&quot;,header = T)
+head(data5, 3) # The first 3 rows in data2
+</code></pre>
+
+<pre><code>##   residence.area. workplace.area. X.categories WorkAtHome Underground
+## 1       E02000001       E02000001         1506          0          73
+## 2       E02000001       E02000014            2          0           2
+## 3       E02000001       E02000016            3          0           1
+##   Train Bus Taxi Other.method F10 F11 F12  F13 F14
+## 1    41  32    9            1   8   1  33 1304   4
+## 2     0   0    0            0   0   0   0    0   0
+## 3     0   2    0            0   0   0   0    0   0
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:#FFFFFF;">
+  <hgroup>
+    <h2>Flights Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <div style='float:left;width:40%;' class='centered'>
+  <img src="flights.png" height="500px" width="400px">
+</div>
+
+<div style='float:right;width:50%;'>
+  <pre style = "width:600px;height:500px;overflow-x:scroll">
+    library(ggmap)
+    library(geosphere)
+    library(rgdal)
+    library(threejs)
+    library(plyr)
+    library(ggplot2)
+    library(maptools)
+    #######################################################################################
+    # https://web.archive.org/web/20150405212054/http://spatial.ly/2015/03/mapping-flows/ #
+    #######################################################################################
+        
+    input<-read.table("wu03ew_v1.csv", sep=",", header=T)
+    input<- input[,1:3]
+    names(input)<- c("origin", "destination","total")
+    centroids<- read.csv("msoa_popweightedcentroids.csv")
+    
+    or.xy<- merge(input, centroids, by.x="origin", by.y="Code")
+    names(or.xy)<- c("origin", "destination", "trips", "o_name", "oX", "oY")
+    dest.xy<- merge(or.xy, centroids, by.x="destination", by.y="Code")
+    names(dest.xy)<- c("origin", "destination", "trips", "o_name", "oX", "oY","d_name", "dX", "dY")
+    
+    # removes the axes in the resulting plot.
+    xquiet<- scale_x_continuous("", breaks=NULL)
+    yquiet<-scale_y_continuous("", breaks=NULL)
+    quiet<-list(xquiet, yquiet)
+    
+    
+    
+    
+    dest <- dest.xy
+    dest.xy <- dest.xy[1:2000,]
+    # build the plot
+    # First we specify the dataframe we need, with a filter excluding flows of <10
+    
+    ggplot(dest.xy[which(dest.xy$trips>10),], aes(oX, oY))+
+    
+    # tells ggplot that we wish to plot line segments. The "alpha=" is line transparency and used below
+      geom_segment(aes(x=oX, y=oY,xend=dX, yend=dY, alpha=trips), col="white")+
+    
+    # Here is the magic bit that sets line transparency - essential to make the plot readable
+      scale_alpha_continuous(range = c(0.03, 0.3))+
+      
+    # Set black background, remove axes and fix aspect ratio
+      theme(panel.background = element_rect(fill='black',colour='black'))+quiet+coord_equal()
+
+  </pre>
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:#FFFFFF;">
+  <hgroup>
+    <h2>Migration Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">data6 &lt;- read.csv(&quot;6_migration.csv&quot;,header = T, sep=&quot;;&quot;)
+head(data6[,c(-1,-5,-10)], 3) # The first 3 rows in data2
+</code></pre>
+
+<pre><code>##   PrsLabel BYear BLocLabel  BLocLat BLocLong DYear DLocLabel  DLocLat
+## 1    David -1039 Bethlehem 31.70310 35.19560  -969 Jerusalem 31.78333
+## 2   Josiah  -648 Jerusalem 31.78333 35.21667  -608 Jerusalem 31.78333
+## 3  Ezekiel  -621 Jerusalem 31.78333 35.21667  -569   Babylon 32.54167
+##   DLocLong Gender PerformingArts Creative Gov.Law.Mil.Act.Rel
+## 1 35.21667   Male              0        0                   1
+## 2 35.21667   Male              0        0                   0
+## 3 44.42333   Male              0        0                   1
+##   Academic.Edu.Health Sports Business.Industry.Travel
+## 1                   0      0                        0
+## 2                   0      0                        0
+## 3                   0      0                        0
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:#FFFFFF;">
+  <hgroup>
+    <h2>Migration Data</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe align = "center" sandbox="allow-scripts allow-forms allow-same-origin" src="http://monaen.github.io/marvelchinese/PlotCode/example4_use_FB/index.html" marginwidth="0" marginheight="0" scrolling="yes" width='800px' height='900px' frameBorder='1'></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-23" style="background:;">
+  <hgroup>
+    <h2>Just do it !!!</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:;">
+  <hgroup>
+    <h2>Summary</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol class = "build incremental">
+<li><p>Recap some traditional visualization methods</p></li>
+<li><p>Advanced Techniques(Radio, Checkbox, ScrollBar, Menu, Choropleth, Symbol Map, Crossfilter)</p></li>
+<li><p>Networks(Facebook, Flights, Migration)</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-25" style="background:;">
+  <article data-timings="">
+    <h2 size = "4">Learning Object: <br> <br> Master the visualization techniques for <br> <br> different kind of data...</h2> 
+
+<h3></h3>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-26" style="background:#FFFFFF;">
+  <hgroup>
+    <h2>For test</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3 style="color:#E81515;" align = "center">Visualize Text Data</h3>
+
+<pre><code>##             word   counts
+## 1   Peking opera 13443635
+## 2      Confucius  4352466
+## 3     Lion dance   426534
+## 4        Chinese  2452436
+## 5           Pipa 34224555
+## 6   Chinese knot  7454635
+## 7      Dumplings  3546546
+## 8        Couplet 73565436
+## 9  Facial Makeup   873536
+## 10       Culture  5693465
+## 11   Tang poetry    45678
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:;">
+  <hgroup>
+    <h2>You may</h2>
+  </hgroup>
+  <article data-timings="">
+    
+ 
+ <div id="slide-27-carousel" class="carousel slide ">
+   <!-- Indicators -->
+   <ol class="carousel-indicators">
+     <li data-target="#slide-27-carousel" data-slide-to="1" class="active"></li>
+     <li data-target="#slide-27-carousel" data-slide-to="2" class=""></li>
+     <li data-target="#slide-27-carousel" data-slide-to="3" class=""></li>
+     <li data-target="#slide-27-carousel" data-slide-to="4" class=""></li>
+   </ol>
+   <!-- Wrapper for slides -->
+   <div class="carousel-inner">
+     <div class="item active" align = "center" >
+       <img src="./final1.png" alt="">
+       <div class="carousel-caption"><!-- Bruce Lowell http://bruce.kus-numa.net/ -->
+
+<p>Words Count(Simple bar plot)</p>
+</div>
+     </div>
+     <div class="item " align = "center" >
+       <img src="./final2.png" alt="">
+       <div class="carousel-caption"><p>Words Count(Muilt bar plot)</p>
+</div>
+     </div>
+     <div class="item " align = "center" >
+       <img src="./final3.png" alt="">
+       <div class="carousel-caption"><p>Word Cloud</p>
+</div>
+     </div>
+     <div class="item " align = "center" >
+       <img src="./final4.png" alt="">
+       <div class="carousel-caption"><p>Bubble Cloud</p>
+</div>
+     </div>
+   </div>
+   <!-- Controls -->
+   <a class="left carousel-control" href="#slide-27-carousel" data-slide="prev">&lsaquo;</a>
+   <a class="right carousel-control" href="#slide-27-carousel" data-slide="next">&rsaquo;</a>
+ </div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-28" style="background:;">
+  <hgroup>
+    <h2>But what I want you to do is ......</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-29" style="background:#FFFFFF;">
+  <hgroup>
+    <h2>WordCloud(Animation)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><div align = "center"></p>
+
+<iframe align = "center" sandbox="allow-scripts allow-forms allow-same-origin" src="http://monaen.github.io/marvelchinese/wordcloud/index.html" marginwidth="0" marginheight="0" scrolling="yes" width='800px' height='900px' frameBorder='1'></iframe>
+
+<p><div></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue dark" id="slide-30" style="background:;">
+  <hgroup>
+    <h2>Thank you !!!</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Overview'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Recap visualization methods(traditional)'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Recap visualization methods(traditional)'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='What data visualization really is?'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Book Data'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Thinking about it in 10 seconds ......'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Motion Chart'>
+         7
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=8 title='Fruits Data'>
+         8
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=9 title='Motion Chart'>
+         9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='More complex data ......'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Geography Data'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Choropleth'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='Time for you'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='Thinking about it in 10 seconds ......'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Symbol Map &amp; Crossfilter'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Hmmmmm how about Network !!!'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='NA'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Can we do that ......'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Flights Data'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='Flights Data'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='Migration Data'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='Migration Data'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='Just do it !!!'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='Summary'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='NA'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='For test'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='You may'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='But what I want you to do is ......'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='WordCloud(Animation)'>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title='Thank you !!!'>
+         30
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  <script src="libraries/widgets/quiz/js/jquery.quiz.js"></script>
+<script src="libraries/widgets/quiz/js/mustache.min.js"></script>
+<script src="libraries/widgets/quiz/js/quiz-app.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootstrap.min.js"></script>
+<script src="libraries/widgets/bootstrap/js/bootbox.min.js"></script>
+
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<script>  
+  $(function (){ 
+    $("#example").popover(); 
+    $("[rel='tooltip']").tooltip(); 
+  });  
+  </script>  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
