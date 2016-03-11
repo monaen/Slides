@@ -271,12 +271,12 @@ head(data6[,c(-1,-5,-10)], 3) # The first 3 rows in data2
 
 ```
 
---- bg:#FFFFFF
+--- bg:#000000
 
 
 ## Migration Data
-
-<iframe align = "center" sandbox="allow-scripts allow-forms allow-same-origin" src="http://monaen.github.io/marvelchinese/PlotCode/example4_use_FB/index.html" marginwidth="0" marginheight="0" scrolling="yes" width='800px' height='900px' frameBorder='1'></iframe>
+<a href="http://monaen.github.io/marvelchinese/PlotCode/example4_use_FB/index.html"> source </a>
+<iframe sandbox="allow-scripts allow-forms allow-same-origin" src="http://monaen.github.io/marvelchinese/PlotCode/example4_use_FB/index.html" marginwidth="0" marginheight="0" width='800px' height='400px' frameBorder='1'></iframe>
 
 
 --- .segue .dark

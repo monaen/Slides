@@ -158,14 +158,14 @@ head(data2, 6) # The first 6 rows in data2
 *** =left
 
 <!-- MotionChart generated in R 3.2.3 by googleVis 0.5.10 package -->
-<!-- Fri Mar 11 13:27:00 2016 -->
+<!-- Fri Mar 11 18:00:12 2016 -->
 
 
 <!-- jsHeader -->
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartID2fba2b03d530 () {
+function gvisDataMotionChartID32811b8ca5dd () {
 var data = new google.visualization.DataTable();
 var datajson =
 [
@@ -263,15 +263,15 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartID2fba2b03d530() {
-var data = gvisDataMotionChartID2fba2b03d530();
+function drawChartMotionChartID32811b8ca5dd() {
+var data = gvisDataMotionChartID32811b8ca5dd();
 var options = {};
 options["width"] =    600;
 options["height"] =    500;
 options["state"] = "";
 
     var chart = new google.visualization.MotionChart(
-    document.getElementById('MotionChartID2fba2b03d530')
+    document.getElementById('MotionChartID32811b8ca5dd')
     );
     chart.draw(data,options);
     
@@ -295,9 +295,9 @@ if (newPackage)
   pkgs.push(chartid);
   
 // Add the drawChart function to the global list of callbacks
-callbacks.push(drawChartMotionChartID2fba2b03d530);
+callbacks.push(drawChartMotionChartID32811b8ca5dd);
 })();
-function displayChartMotionChartID2fba2b03d530() {
+function displayChartMotionChartID32811b8ca5dd() {
   var pkgs = window.__gvisPackages = window.__gvisPackages || [];
   var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
   window.clearTimeout(window.__gvisLoad);
@@ -321,11 +321,11 @@ callbacks.shift()();
 </script>
  
 <!-- jsChart -->  
-<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID2fba2b03d530"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartMotionChartID32811b8ca5dd"></script>
  
 <!-- divChart -->
   
-<div id="MotionChartID2fba2b03d530" 
+<div id="MotionChartID32811b8ca5dd" 
   style="width: 600; height: 500;">
 </div>
 
@@ -529,12 +529,12 @@ head(data6[,c(-1,-5,-10)], 3) # The first 3 rows in data2
 ## 3                   0      0                        0
 ```
 
---- bg:#FFFFFF
+--- bg:#000000
 
 
 ## Migration Data
-
-<iframe align = "center" sandbox="allow-scripts allow-forms allow-same-origin" src="http://monaen.github.io/marvelchinese/PlotCode/example4_use_FB/index.html" marginwidth="0" marginheight="0" scrolling="yes" width='800px' height='900px' frameBorder='1'></iframe>
+<a href="http://monaen.github.io/marvelchinese/PlotCode/example4_use_FB/index.html"> source </a>
+<iframe sandbox="allow-scripts allow-forms allow-same-origin" src="http://monaen.github.io/marvelchinese/PlotCode/example4_use_FB/index.html" marginwidth="0" marginheight="0" width='800px' height='400px' frameBorder='1'></iframe>
 
 
 --- .segue .dark
