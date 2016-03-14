@@ -1,6 +1,6 @@
 ---
 title       : Data Visualization
-subtitle    : An artist field in vision
+subtitle    : An art field in vision
 author      : Nan Meng
 job         : Ph.D
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
