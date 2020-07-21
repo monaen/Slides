@@ -1,0 +1,6 @@
+rank,name,parent,icon,value,diff,province
+1,Myanmar,Top Level,../pic/flags/ecuador.png,3.4,0,Liaoning
+2,Norway,Top Level,../pic/flags/ecuador.png,3.5,0.1,Liaoning
+3,Tanzania,Top Level,../pic/flags/Thailand.png,3.5,0.1,Liaoning
+4,Cuba,Top Level,../pic/flags/ecuador.png,3.2,0.2,Liaoning
+5,India,Top Level,../pic/flags/ecuador.png,3.6,0.2,Liaoning

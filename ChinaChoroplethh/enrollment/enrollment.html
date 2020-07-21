@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style>
+        .provinces {
+          background-color: #fff;
+          border: 1px solid #ccc;
+        }
+
+        .tooltip{ background-color:rgba(240,240,240,0.5);
+          margin: 10px;
+          height: 50px;
+          width: 90px;
+          padding-top: 10px;
+          -webkit-border-radius:10px;
+          -moz-border-radius:10px;
+          border-radius:10px;
+          font-size: 0.8em;
+          text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script src="../common/d3.v3.min.js"></script>
+    <script src="../common/queue.v1.min.js"></script>
+    <script src="../common/topojson.v1.min.js"></script>
+    <script>
+        
+        // MAP setup
+        var width = 800,
+            height = 550;
+
+        // data goes here
+        var data=[
+  ["Anhui",0.921998247],
+  ["Beijing",3.993333333],
+  ["Chongqing",1.113175676],
+  ["Fujian",1.212271973],
+  ["Gansu",0.696540881],
+  ["Guangdong",0.763392857],
+  ["Guangxi",0.743764172],
+  ["Guizhou",0.482163406],
+  ["Hainan",0.988505747],
+  ["Hebei",1.095149254],
+  ["Heilongjiang",1.240069085],
+  ["Henan",0.795085995],
+  ["Hubei",1.536216216],
+  ["Hunan",1.120040692],
+  ["Inner Mongol",0.97080292],
+  ["Jiangsu",1.529518619],
+  ["Jiangxi",0.994232987],
+  ["Jilin",1.511335013],
+  ["Liaoning",1.566343042],
+  ["Ningxia",0.727272727],
+  ["Qinghai",0.520408163],
+  ["Shaanxi",1.392764858],
+  ["Shandong",1.089102564],
+  ["Shanghai",3.43537415],
+  ["Shanxi",0.81763285],
+  ["Sichuan",0.840608466],
+  ["Tianjin",3.475177305],
+  ["Tibet",0.586206897],
+  ["Xinjiang",0.616407982],
+  ["Yunnan",0.65748503],
+  ["Zhejiang",1.227621483]
+];
+        var title='2013 Enrollment Rate(%)';
+        var desc='Source: China Statistical Information and Consultancy Centre (CSICC)';var credits='';var units='';
+
+    </script>
+    <script src="d3map.js"></script>
+    <script src="d3tooltip.js"></script>
+
+  </body>
+</html>

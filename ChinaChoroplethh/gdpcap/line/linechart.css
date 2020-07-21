@@ -1,0 +1,65 @@
+<style>
+
+    body {
+      font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: #cccccc;
+      stroke-width: 2;
+      shape-rendering: crispEdges;
+      opacity:0.3;
+
+    }
+
+
+    .y.axis line{
+      stroke:#777;
+      stroke-dasharray:2,2;
+      opacity: 0.3;
+    }
+
+
+    .line {
+      fill: none;
+      stroke-width: 3px;
+      stroke-opacity:.75;
+
+    }
+
+    .legend {
+      fill: black;
+      display: block;
+    }
+
+    line.horizonalGrid{
+      fill : none;
+      shape-rendering : crispEdges;
+      stroke : black;
+      stroke-width : 1.5px;
+      } 
+
+    .legend rect {
+      fill:white;
+      stroke:black;
+      opacity:0.8;
+    }  
+
+    .legend rect {
+      fill:white;
+      stroke:black;
+      opacity:0.8;
+    } 
+
+    .legend rect {
+      fill:white;
+      stroke:black;
+      opacity:0.8;
+    }
+
+
+
+
+</style>

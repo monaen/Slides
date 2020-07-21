@@ -1,0 +1,6 @@
+rank,name,parent,icon,value,diff,province
+1,Panama,Top Level,../pic/flags/ecuador.png,4.1,0,Ningxia
+2,Cote d'Ivoire,Top Level,../pic/flags/ecuador.png,4,0.1,Ningxia
+3,Cameroon,Top Level,../pic/flags/Thailand.png,4,0.1,Ningxia
+4,Ecuador,Top Level,../pic/flags/ecuador.png,4.2,0.1,Ningxia
+5,Honduras,Top Level,../pic/flags/ecuador.png,4.2,0.1,Ningxia

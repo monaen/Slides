@@ -1,0 +1,6 @@
+rank,name,parent,icon,value,diff,province
+1,Bhutan,Top Level,../pic/flags/ecuador.png,2.1,0.1,Hainan
+2,Papua New Guinea,Top Level,../pic/flags/ecuador.png,2.1,0.1,Hainan
+3,Vietnam,Top Level,../pic/flags/Thailand.png,2,0.2,Hainan
+4,Bolivia,Top Level,../pic/flags/ecuador.png,2.6,0.4,Hainan
+5,Guinea,Top Level,../pic/flags/ecuador.png,1.8,0.4,Hainan

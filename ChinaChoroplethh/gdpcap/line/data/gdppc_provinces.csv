@@ -1,0 +1,156 @@
+"rank","country","country_gdp_pc","diff","province","province_gpd_pc"
+1,"Thailand",5519,191,"Anhui",5710
+2,"Algeria",5498,212,"Anhui",5710
+3,"Macedonia, FYR",5456,254,"Anhui",5710
+4,"Angola",5424,286,"Anhui",5710
+5,"Jordan",5423,287,"Anhui",5710
+1,"Seychelles",15359,251,"Beijing",15610
+2,"Barbados",15343,267,"Beijing",15610
+3,"Latvia",16038,428,"Beijing",15610
+4,"St. Kitts and Nevis",15167,443,"Beijing",15610
+5,"Lithuania",16445,835,"Beijing",15610
+1,"Grenada",8296,54,"Chongqing",8350
+2,"Maldives",8484,134,"Chongqing",8350
+3,"Belarus",8040,310,"Chongqing",8350
+4,"Colombia",7904,446,"Chongqing",8350
+5,"Azerbaijan",7884,466,"Chongqing",8350
+1,"Costa Rica",10415,25,"Fujian",10440
+2,"Turkey",10530,90,"Fujian",10440
+3,"Mexico",10230,210,"Fujian",10440
+4,"Gabon",10208,232,"Fujian",10440
+5,"Lebanon",10058,382,"Fujian",10440
+1,"Guyana",4226,134,"Gansu",4360
+2,"Fiji",4546,186,"Gansu",4360
+3,"Samoa",4173,187,"Gansu",4360
+4,"Mongolia",4129,231,"Gansu",4360
+5,"El Salvador",4129,231,"Gansu",4360
+1,"Romania",9997,117,"Guangdong",9880
+2,"Mauritius",10006,126,"Guangdong",9880
+3,"Lebanon",10058,178,"Guangdong",9880
+4,"Gabon",10208,328,"Guangdong",9880
+5,"Mexico",10230,350,"Guangdong",9880
+1,"Algeria",5498,18,"Guangxi",5480
+2,"Macedonia, FYR",5456,24,"Guangxi",5480
+3,"Thailand",5519,39,"Guangxi",5480
+4,"Angola",5424,56,"Guangxi",5480
+5,"Jordan",5423,57,"Guangxi",5480
+1,"Fiji",4546,126,"Guizhou",4420
+2,"Guyana",4226,194,"Guizhou",4420
+3,"Albania",4619,199,"Guizhou",4420
+4,"Samoa",4173,247,"Guizhou",4420
+5,"Mongolia",4129,291,"Guizhou",4420
+1,"Iraq",6334,6,"Hainan",6340
+2,"Ecuador",6322,18,"Hainan",6340
+3,"South Africa",6478,138,"Hainan",6340
+4,"Serbia",6153,187,"Hainan",6340
+5,"Dominican Republic",6147,193,"Hainan",6340
+1,"South Africa",6478,38,"Hebei",6440
+2,"Iraq",6334,106,"Hebei",6440
+3,"Peru",6551,111,"Hebei",6440
+4,"Ecuador",6322,118,"Hebei",6440
+5,"Libya",6570,130,"Hebei",6440
+1,"Iraq",6334,36,"Heilongjiang",6370
+2,"Ecuador",6322,48,"Heilongjiang",6370
+3,"South Africa",6478,108,"Heilongjiang",6370
+4,"Peru",6551,181,"Heilongjiang",6370
+5,"Libya",6570,200,"Heilongjiang",6370
+1,"Dominican Republic",6147,127,"Henan",6020
+2,"Serbia",6153,133,"Henan",6020
+3,"Ecuador",6322,302,"Henan",6020
+4,"Iraq",6334,314,"Henan",6020
+5,"South Africa",6478,458,"Henan",6020
+1,"Belarus",8040,10,"Hubei",8030
+2,"Colombia",7904,126,"Hubei",8030
+3,"Azerbaijan",7884,146,"Hubei",8030
+4,"Grenada",8296,266,"Hubei",8030
+5,"Bulgaria",7713,317,"Hubei",8030
+1,"St. Vincent and the Grenadines",6663,23,"Hunan",6640
+2,"Libya",6570,70,"Hunan",6640
+3,"Peru",6551,89,"Hunan",6640
+4,"South Africa",6478,162,"Hunan",6640
+5,"Iraq",6334,306,"Hunan",6640
+1,"Palau",11880,190,"Inner Mongolia",11690
+2,"Panama",11949,259,"Inner Mongolia",11690
+3,"Brazil",11385,305,"Inner Mongolia",11690
+4,"Kazakhstan",12276,586,"Inner Mongolia",11690
+5,"Malaysia",10933,757,"Inner Mongolia",11690
+1,"Croatia",13507,347,"Jiangsu",13160
+2,"Russian Federation",12736,424,"Jiangsu",13160
+3,"Argentina",12569,591,"Jiangsu",13160
+4,"Hungary",13903,743,"Jiangsu",13160
+5,"Antigua and Barbuda",13962,802,"Jiangsu",13160
+1,"Thailand",5519,61,"Jiangxi",5580
+2,"Algeria",5498,82,"Jiangxi",5580
+3,"Macedonia, FYR",5456,124,"Jiangxi",5580
+4,"Angola",5424,156,"Jiangxi",5580
+5,"Jordan",5423,157,"Jiangxi",5580
+1,"Grenada",8296,26,"Jilin",8270
+2,"Maldives",8484,214,"Jilin",8270
+3,"Belarus",8040,230,"Jilin",8270
+4,"Colombia",7904,366,"Jilin",8270
+5,"Azerbaijan",7884,386,"Jilin",8270
+1,"Turkey",10530,170,"Liaoning",10700
+2,"Malaysia",10933,233,"Liaoning",10700
+3,"Costa Rica",10415,285,"Liaoning",10700
+4,"Mexico",10230,470,"Liaoning",10700
+5,"Gabon",10208,492,"Liaoning",10700
+1,"St. Vincent and the Grenadines",6663,167,"Ningxia",6830
+2,"Libya",6570,260,"Ningxia",6830
+3,"Peru",6551,279,"Ningxia",6830
+4,"Botswana",7123,293,"Ningxia",6830
+5,"South Africa",6478,352,"Ningxia",6830
+1,"Iraq",6334,26,"Qinghai",6360
+2,"Ecuador",6322,38,"Qinghai",6360
+3,"South Africa",6478,118,"Qinghai",6360
+4,"Peru",6551,191,"Qinghai",6360
+5,"Serbia",6153,207,"Qinghai",6360
+1,"China",7594,46,"Shaanxi",7640
+2,"Bulgaria",7713,73,"Shaanxi",7640
+3,"St. Lucia",7435,205,"Shaanxi",7640
+4,"Dominica",7434,206,"Shaanxi",7640
+5,"Azerbaijan",7884,244,"Shaanxi",7640
+1,"Romania",9997,7,"Shandong",9990
+2,"Mauritius",10006,16,"Shandong",9990
+3,"Lebanon",10058,68,"Shandong",9990
+4,"Gabon",10208,218,"Shandong",9990
+5,"Mexico",10230,240,"Shandong",9990
+1,"St. Kitts and Nevis",15167,177,"Shanghai",14990
+2,"Barbados",15343,353,"Shanghai",14990
+3,"Seychelles",15359,369,"Shanghai",14990
+4,"Chile",14528,462,"Shanghai",14990
+5,"Poland",14423,567,"Shanghai",14990
+1,"Thailand",5519,191,"Shanxi",5710
+2,"Algeria",5498,212,"Shanxi",5710
+3,"Macedonia, FYR",5456,254,"Shanxi",5710
+4,"Angola",5424,286,"Shanxi",5710
+5,"Jordan",5423,287,"Shanxi",5710
+1,"Dominican Republic",6147,207,"Sichuan",5940
+2,"Serbia",6153,213,"Sichuan",5940
+3,"Ecuador",6322,382,"Sichuan",5940
+4,"Iraq",6334,394,"Sichuan",5940
+5,"Thailand",5519,421,"Sichuan",5940
+1,"Slovak Republic",18417,387,"Tianjin",18030
+2,"Equatorial Guinea",17430,600,"Tianjin",18030
+3,"Uruguay",16807,1223,"Tianjin",18030
+4,"Oman",19310,1280,"Tianjin",18030
+5,"Venezuela, RB",16615,1415,"Tianjin",18030
+1,"Paraguay",4729,31,"Tibet",4760
+2,"Bosnia and Herzegovina",4805,45,"Tibet",4760
+3,"Albania",4619,141,"Tibet",4760
+4,"Fiji",4546,214,"Tibet",4760
+5,"Guyana",4226,534,"Tibet",4760
+1,"Iraq",6334,16,"Xinjiang",6350
+2,"Ecuador",6322,28,"Xinjiang",6350
+3,"South Africa",6478,128,"Xinjiang",6350
+4,"Serbia",6153,197,"Xinjiang",6350
+5,"Peru",6551,201,"Xinjiang",6350
+1,"Fiji",4546,106,"Yunnan",4440
+2,"Albania",4619,179,"Yunnan",4440
+3,"Guyana",4226,214,"Yunnan",4440
+4,"Samoa",4173,267,"Yunnan",4440
+5,"Paraguay",4729,289,"Yunnan",4440
+1,"Brazil",11385,45,"Zhejiang",11430
+2,"Palau",11880,450,"Zhejiang",11430
+3,"Malaysia",10933,497,"Zhejiang",11430
+4,"Panama",11949,519,"Zhejiang",11430
+5,"Kazakhstan",12276,846,"Zhejiang",11430

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <style>
+
+        .province:hover { 
+          opacity: 0.5;
+          stroke:#084594;
+          stroke-width:1px;
+        }
+        .tooltip{ background-color:rgba(240,240,240,0.5);
+          margin: 10px;
+          height: 50px;
+          width: 90px;
+          padding-top: 10px;
+          -webkit-border-radius:10px;
+          -moz-border-radius:10px;
+          border-radius:10px;
+          font-size: 0.8em;
+          text-align:center;
+        }
+
+        #map {
+          position: fixed;
+          left: 0px;
+          top: 0px;
+        }
+        .provinceicon {
+          z-index: -200;
+          position: fixed;
+          left: 141px;
+          top: 164px;
+          width: 300px;
+        }
+
+        .ctree{
+            position: relative;
+            width: 600px;
+            left: 500px;
+            height: 350px;
+        }
+
+        .chart{
+            position: relative;
+            left: 500px;
+            width: 600px;
+            height: 400px;
+        }
+
+        iframe {
+            overflow:hidden;
+            display: block;
+        }
+
+        @font-face {
+          font-family: 'FZHCJW--GB1-0';
+          src: url("../font/fangzhenghuangcao.ttf") format("truetype");
+        }
+
+        body > p{
+          position: absolute;
+          float:right;
+          background-color: rgba(0,0,0,0.2);
+          margin-left: 800px;
+          margin-right: 50px;
+          padding: 30px;
+          text-align: left;
+          color:white;
+          opacity: 0.8;
+        }
+
+        span{
+          color:#084594;
+          font-size: 18px;  
+        }
+
+        /* Start css labels for closest country for each province. */ 
+        .country{
+          color:white;
+          position:absolute;
+        }
+
+        .countrylabels {
+          position: fixed;
+          z-index: 100;
+
+        }
+        #inner{
+          top:185px;
+          left:425px;
+        }
+
+        #hei{
+          top:105px;
+          left:615px;
+          font-size: 12px;
+        }
+
+        #ji{
+          top:150px;
+          left:585px;
+          font-size: 9px;
+        }
+
+        #liao{
+          top:187px;
+          left:557px;
+          font-size: 11px;
+        }
+
+        #hebei{
+          top:225px;
+          left:485px;
+          font-size: 11px;
+        }
+
+        #shandong{
+          top:257px;
+          left:504px;
+          font-size: 13px;
+        }
+        #xin{
+          top:200px;
+          left:175px;
+          font-size: 16px;
+        }
+        #qing{
+          top:270px;
+          left:290px;
+          font-size: 16px;
+        }
+        #Tibet{
+          top:320px;
+          left:200px;
+          font-size: 16px;
+        }
+        #si{
+          top:320px;
+          left:335px;
+          font-size: 13px;
+        }
+        #yun{
+          top:380px;
+          left:330px;
+          font-size: 13px;
+        }
+
+        #gansu{
+          top:210px;
+          left:300px;
+          font-size: 13px;
+        }
+
+        #ningxia{
+          top:250px;
+          left:390px;
+          font-size: 8px; }
+
+        #shaan{
+          top:285px;
+          left:410px;
+          font-size: 13px;
+        }
+
+        #shan{
+          top:242px;
+          left:447px;
+          font-size: 9px;
+        }
+
+
+        #henan{
+          top:295px;
+          left:465px;
+          font-size: 9px;
+        }
+
+        #hubei{
+          top:330px;
+          left:455px;
+          font-size: 9px;
+        }
+
+        #chong{
+          top:345px;
+          left:405px;
+          font-size: 8px;
+        }
+
+        #gui{
+          top:375px;
+          left:385px;
+          font-size: 10px;
+        }
+
+        #hunan{
+          top:364px;
+          left:435px;
+          font-size: 8px;
+        }
+
+        #guangxi{
+          top:425px;
+          left:420px;
+          font-size: 8px;
+        }
+
+        #guangdong{
+          top:420px;
+          left:460px;
+          font-size: 8px;
+        }
+
+        #hainan{
+          top:475px;
+          left:435px;
+          font-size: 8px;
+          color: #D7D7D7;
+
+        }
+
+        #anhui{
+          top:330px;
+          left:510px;
+          font-size: 8px;
+        }
+        #jiangsu{
+          top:300px;
+          left:523px;
+          font-size: 8px;
+        }
+
+        #zhejiang{
+          top:350px;
+          left:525px;
+          font-size: 8px;
+        }
+
+
+        #jiangxi{
+          top:375px;
+          left:485px;
+          font-size: 8px;
+        }
+
+        #fujian{
+          top:392px;
+          left:507px;
+          font-size: 8px;
+        }
+
+        #beijing{
+          top:212px;
+          left:500px;
+          font-size: 8px;
+          color: #D7D7D7;
+        }
+
+        #tianjin{
+          top:230px;
+          left:520px;
+          font-size: 8px;
+          color: #D7D7D7;
+        }
+
+        #shanghai{
+          top:330px;
+          left:570px;
+          font-size: 8px;
+          color: #D7D7D7;
+        }
+        /* done css labels */
+
+
+
+        /* starting collapsible tree. */
+        .ctree .node {
+          cursor: pointer;
+        }
+
+        .ctree .node circle {
+          fill: #fff;
+          stroke: #A00404;
+          stroke-width: 3px;
+        }
+
+        .ctree .node text {
+          font: 12px sans-serif;
+        }
+
+        .ctree .link {
+          fill: none;
+          stroke: #ccc;
+          stroke-width: 2px;
+          stroke-dasharray:2,2;
+        }/* done collapsible tree. */
+
+
+        /* starting line chart. */
+        .chart {
+          font: 10px sans-serif;
+        }
+
+        .chart .axis path,
+        .chart .axis line {
+          fill: none;
+          stroke: #cccccc;
+          stroke-width: 2;
+          shape-rendering: crispEdges;
+          opacity:0.3;
+        }
+
+
+        .chart .y.axis line{
+          stroke:#777;
+          stroke-dasharray:2,2;
+          opacity: 0.3;
+        }
+
+
+        .chart .line {
+          fill: none;
+          stroke-width: 3px;
+          stroke-opacity:.75;
+        }
+
+        .chart .legend {
+          fill: black;
+          display: block;
+        }
+
+        .chart line.horizonalGrid{
+          fill : none;
+          shape-rendering : crispEdges;
+          stroke : black;
+          stroke-width : 1.5px;
+        } 
+
+        .chart .legend rect {
+          fill:white;
+          stroke:black;
+          opacity:0.8;
+        } 
+      /* done line chart*/
+    </style>
+  </head>
+  <body>
+    <p>
+     DESPITE all the ups and downs in China’s economy over the past decade, its official unemployment rate has remained incredibly stable. Beijing, China's capital city, home to many State owned enterprises, has the lowest unemployment rate equivalent to Benim.  
+      <br>
+      <span> Click on each province to see more details</span>
+    </p>
+
+
+      <!-- lacate country names -->
+    <div class="countrylabels">
+      <h4 class="country" id="inner">Liberia</h4>
+      <h4 class="country" id="hei">Switzerland</h4>
+      <h4 class="country" id="ji">United Arab <br>Emirates</h4>
+      <h4 class="country" id="liao">Myanmar</h4>
+      <h4 class="country" id="hebei">Liberia</h4>
+      <h4 class="country" id="shandong">Cuba</h4>
+      <h4 class="country" id="xin">Myanmar</h4>
+      <h4 class="country" id="qing">Cuba</h4>
+      <h4 class="country" id="Tibet">Bolivia</h4>
+      <h4 class="country" id="si">Panama</h4>
+      <h4 class="country" id="yun">Cote d'Ivoire</h4>
+      <h4 class="country" id="gansu">Bhutan</h4>
+      <h4 class="country" id="ningxia">Panama</h4>
+      <h4 class="country" id="shaan">Cuba</h4>
+      <h4 class="country" id="shan">Burkina<br> Faso</h4>
+      <h4 class="country" id="henan">Burkina<br> Faso</h4>
+      <h4 class="country" id="hubei">Norway</h4>
+      <h4 class="country" id="chong">Myanmar</h4>
+      <h4 class="country" id="gui">Cuba</h4>
+      <h4 class="country" id="hunan">Ecuador</h4>
+      <h4 class="country" id="guangxi">Cuba</h4>
+      <h4 class="country" id="guangdong">Bolivia</h4>
+      <h4 class="country" id="hainan">Bhutan</h4>
+      <h4 class="country" id="anhui">Myanmar</h4>
+      <h4 class="country" id="jiangsu">Burkina<br> Faso</h4>
+      <h4 class="country" id="zhejiang">Burkina<br> Faso</h4>
+      <h4 class="country" id="jiangxi">Cuba</h4>
+      <h4 class="country" id="fujian">Norway</h4>
+      <h4 class="country" id="beijing">Benin</h4>
+      <h4 class="country" id="tianjin">India</h4>
+      <h4 class="country" id="shanghai">Ecuador</h4>
+    </div>
+
+    <div id="provinceicons">
+        <img id="0_1" class="provinceicon" src="../pic/0.svg" style="display:none"></img>
+
+        <img id="1_1" class="provinceicon" src="../pic/1.svg" style="display:none"></img>
+
+        <img id="2_1" class="provinceicon" src="../pic/2.svg" style="display:none"></img>
+
+        <img id="3_1" class="provinceicon" src="../pic/3.svg" style="display:none"></img>
+
+        <img id="4_1" class="provinceicon" src="../pic/4.svg" style="display:none"></img>
+
+        <img id="5_1" class="provinceicon" src="../pic/5.svg" style="display:none"></img>
+
+        <img id="6_1" class="provinceicon" src="../pic/6.svg" style="display:none"></img>
+
+        <img id="7_1" class="provinceicon" src="../pic/7.svg" style="display:none"></img>
+
+        <img id="8_1" class="provinceicon" src="../pic/8.svg" style="display:none"></img>
+
+        <img id="9_1" class="provinceicon" src="../pic/9.svg" style="display:none"></img>
+
+        <img id="10_1" class="provinceicon" src="../pic/10.svg" style="display:none"></img>
+
+        <img id="11_1" class="provinceicon" src="../pic/11.svg" style="display:none"></img>
+
+        <img id="12_1" class="provinceicon" src="../pic/12.svg" style="display:none" ></img>
+
+        <img id="13_1" class="provinceicon" src="../pic/13.svg" style="display:none"></img>
+
+        <img id="14_1" class="provinceicon" src="../pic/14.svg" style="display:none"></img>
+
+        <img id="15_1" class="provinceicon" src="../pic/15.svg" style="display:none"></img>
+
+        <img id="16_1" class="provinceicon" src="../pic/16.svg" style="display:none"></img>
+
+        <img id="17_1" class="provinceicon" src="../pic/17.svg" style="display:none"></img>
+
+        <img id="18_1" class="provinceicon" src="../pic/18.svg" style="display:none"></img>
+
+        <img id="19_1" class="provinceicon" src="../pic/19.svg" style="display:none"></img>
+
+        <img id="20_1" class="provinceicon" src="../pic/20.svg" style="display:none"></img>
+
+        <img id="21_1" class="provinceicon" src="../pic/21.svg" style="display:none"></img>
+
+        <img id="22_1" class="provinceicon" src="../pic/22.svg" style="display:none"></img>
+
+        <img id="23_1" class="provinceicon" src="../pic/23.svg" style="display:none"></img>
+
+        <img id="24_1" class="provinceicon" src="../pic/24.svg" style="display:none"></img>
+
+        <img id="25_1" class="provinceicon" src="../pic/25.svg" style="display:none"></img>
+
+        <img id="26_1" class="provinceicon" src="../pic/26.svg" style="display:none"></img>
+
+        <img id="27_1" class="provinceicon" src="../pic/27.svg" style="display:none"></img>
+
+        <img id="28_1" class="provinceicon" src="../pic/28.svg" style="display:none"></img>
+
+        <img id="29_1" class="provinceicon" src="../pic/29.svg" style="display:none"></img>
+
+        <img id="30_1" class="provinceicon" src="../pic/30.svg" style="display:none"></img>
+
+    </div>
+
+    <div id="map"></div>
+
+    <script src="../common/jquery-2.1.4.min.js"></script>
+    <script src="../common/d3.v3.min.js"></script>
+    <script src="../common/queue.v1.min.js"></script>
+    <script src="../common/topojson.v1.min.js"></script>
+
+    <script src="../common/common_d3map.js"></script>
+    <script src="d3map.js"></script>
+    <script src="d3tooltip.js"></script>
+
+    <script src="../line_chart/line_chart_main.js"></script>
+    <script src="../line_chart/d3.legend.js"></script>
+    <script src="../common/index2province.js"></script>
+
+    <script src="../common/unemploymentTreeData.js"></script>
+    <script src="../common/common_collapsible_tree.js"></script>
+
+    <script>
+      /* Collapsible tree.*/
+      for (var treeIndex = 0; treeIndex < 31; treeIndex++) {
+        $('#provinceicons').append(
+          $('<div/>')
+              .addClass('ctree')
+              .attr('id', treeIndex + '_2')
+              .hide()
+        );
+        makeTree(
+          unemploymentTreeData[treeIndex],
+          $('#' + treeIndex + '_2')[0],
+          true /* has percentage sign */);
+      }
+    </script>
+
+    <script>
+      /* Line chart graph. */
+      for (var lineIndex = 0; lineIndex < 31; lineIndex++) {
+        $('#provinceicons').append(
+          $('<div/>')
+              .addClass('chart')
+              .attr('id', lineIndex + '_3')
+              .hide()
+        );
+        makeLineChart(indexToProvince[lineIndex], $('#' + lineIndex + '_3')[0]);
+      }
+    </script>
+  </body>
+</html>

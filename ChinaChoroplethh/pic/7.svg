@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- 由 Microsoft Visio, SVG Export 生成 7.svg Page-1 -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"
+		xmlns:v="http://schemas.microsoft.com/visio/2003/SVGExtensions/" width="8.5in" height="11in" viewBox="0 0 612 792"
+		xml:space="preserve" color-interpolation-filters="sRGB" class="st4">
+	<v:documentProperties v:langID="1033" v:viewMarkup="false">
+		<v:userDefs>
+			<v:ud v:nameU="msvNoAutoConnect" v:val="VT0(1):26"/>
+		</v:userDefs>
+	</v:documentProperties>
+
+	<style type="text/css">
+	<![CDATA[
+		.st1 {fill:none;stroke:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:0.75}
+		.st2 {fill:#c05046;font-family:STKaiti;font-size:21.6667em;font-weight:bold}
+		.st3 {fill:#c00000;font-family:Times New Roman;font-size:6.66666em}
+		.st4 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
+	]]>
+	</style>
+
+	<g v:mID="0" v:index="1" v:groupContext="foregroundPage">
+		<title>页-1</title>
+		<v:pageProperties v:drawingScale="1" v:pageScale="1" v:drawingUnits="19" v:shadowOffsetX="9" v:shadowOffsetY="-9"/>
+		<g id="group5-1" transform="translate(45,-483.331)" v:mID="5" v:groupContext="group">
+			<title>工作表.5</title>
+			<g id="shape1-2" v:mID="1" v:groupContext="shape" transform="translate(6.39488E-014,-43.3625)">
+				<title>工作表.1</title>
+				<desc>皖</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)"/>
+				<v:textRect cx="143.488" cy="694.094" width="286.98" height="195.813"/>
+				<rect x="0" y="596.187" width="286.977" height="195.813" class="st1"/>
+				<text x="13.36" y="772.09" class="st2" v:langID="2052"><v:paragraph v:horizAlign="1"/><v:tabList/>皖</text>			</g>
+			<g id="shape3-5" v:mID="3" v:groupContext="shape" transform="translate(126,43.1438)">
+				<title>工作表.3</title>
+				<desc>Anhui</desc>
+				<v:textBlock v:margins="rect(4,4,4,4)"/>
+				<v:textRect cx="189" cy="764.187" width="378" height="55.6254"/>
+				<rect x="0" y="736.375" width="378" height="55.6254" class="st1"/>
+				<text x="89" y="788.19" class="st3" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Anhui</text>			</g>
+		</g>
+	</g>
+</svg>
